@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3123322fd55e24c48a8298fbd6836f8c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - squareprefab: {fileID: -2237571469915925643, guid: b75efb5af8aaecf43b6d2397e9f0ae8a, type: 3}
+  - obstacleprefab: {fileID: -6449482844822422160, guid: 0ceee558d0657c2499d8acef9781e0f1, type: 3}
+  - enemyprefab: {fileID: -5740104561507881925, guid: 225c423a0d4228041ad23eaa22796d31, type: 3}
+  - playerPrefab: {fileID: -8897965173722864139, guid: cecbdca2065393b4ea4c995dedff8c07, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
