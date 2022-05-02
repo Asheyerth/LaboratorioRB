@@ -341,8 +341,11 @@
 "Assets/Scripts/BoardManager.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Frame.cs"
+"Assets/Scripts/Goal.cs"
+"Assets/Scripts/Inicio.cs"
 "Assets/Scripts/PathManager.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Retry.cs"
 "Assets/Scripts/square.cs"
 -langversion:8.0
 

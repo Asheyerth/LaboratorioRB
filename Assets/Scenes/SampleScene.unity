@@ -282,6 +282,7 @@ MonoBehaviour:
   obstacleprefab: {fileID: -6449482844822422160, guid: 0ceee558d0657c2499d8acef9781e0f1, type: 3}
   enemyprefab: {fileID: -5740104561507881925, guid: 225c423a0d4228041ad23eaa22796d31, type: 3}
   playerPrefab: {fileID: -8897965173722864139, guid: cecbdca2065393b4ea4c995dedff8c07, type: 3}
+  goalprefab: {fileID: 6441680623962231667, guid: 760d5fe1b78f2364291c531a5c7c3f2c, type: 3}
   mspeed: 2
 --- !u!4 &2098514826
 Transform:

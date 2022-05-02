@@ -27,8 +27,22 @@ public class Enemy : MonoBehaviour
             Debug.Log("Posicion en Y player");
             Debug.Log(player.transform.position.y);
             Vector2 next = BoardManager.Instance.nextMovement((int)transform.position.x, (int)transform.position.y, (int)player.transform.position.x, (int)player.transform.position.y);
+
+            float dirx = next.x - transform.position.x;
+            float diry = next.y - transform.position.y;
+            if (Mathf.Abs(dirx) < Mathf.Abs(diry) && Mathf.Abs(dirx) > Mathf.Epsilon)
+            {
+                next.y = transform.position.y;
+            }
+            else if (Mathf.Abs(diry) > Mathf.Epsilon)
+            {
+                next.x = transform.position.x;
+            }
+
+
             transform.position = Vector2.MoveTowards(transform.position, next, step);
             Debug.Log(next);
         }
     }
 }
+

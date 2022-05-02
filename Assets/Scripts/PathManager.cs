@@ -48,8 +48,6 @@ public class PathManager : MonoBehaviour
             square currentNode = GetLowestFCostNode(openList);
             if (currentNode == endCell)
             {
-                // Reached final node
-                Debug.Log("Reach the end");
                 return CalculatePath(endCell);
             }
 
@@ -78,7 +76,6 @@ public class PathManager : MonoBehaviour
                         openList.Add(neighbourNode);
                     }
                 }
-                //PathfindingDebugStepVisual.Instance.TakeSnapshot(grid, currentNode, openList, closedList);
             }
         }
         Debug.Log("Did not reach the end");
@@ -97,11 +94,6 @@ public class PathManager : MonoBehaviour
         }
         path.Reverse();
 
-        //foreach (square c in path)
-        //{
-        //    c.SetInner();
-        //    Debug.Log(c.ToString());
-        //}
         return path;
     }
 
@@ -111,25 +103,13 @@ public class PathManager : MonoBehaviour
 
         if (currentNode.x - 1 >= 0)
         {
-            // Left
             neighbourList.Add(GetNode(currentNode.x - 1, currentNode.y));
-            //// Left Down
-            //if (currentNode.y - 1 >= 0) neighbourList.Add(GetNode(currentNode.x - 1, currentNode.y - 1));
-            //// Left Up
-            //if (currentNode.y + 1 < frame.GetHeight()) neighbourList.Add(GetNode(currentNode.x - 1, currentNode.y + 1));
         }
         if (currentNode.x + 1 < frame.GetWidth())
         {
-            // Right
             neighbourList.Add(GetNode(currentNode.x + 1, currentNode.y));
-            //// Right Down
-            //if (currentNode.y - 1 >= 0) neighbourList.Add(GetNode(currentNode.x + 1, currentNode.y - 1));
-            //// Right Up
-            //if (currentNode.y + 1 < frame.GetHeight()) neighbourList.Add(GetNode(currentNode.x + 1, currentNode.y + 1));
         }
-        // Down
         if (currentNode.y - 1 >= 0) neighbourList.Add(GetNode(currentNode.x, currentNode.y - 1));
-        // Up
         if (currentNode.y + 1 < frame.GetHeight()) neighbourList.Add(GetNode(currentNode.x, currentNode.y + 1));
 
         return neighbourList;
